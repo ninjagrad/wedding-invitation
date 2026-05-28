@@ -46,7 +46,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta content="태준❤○○○ 결혼식에 초대합니다" name="Title" />
         <meta
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
+          content="2026년 7월 8일 수요일 오후 2시 45분"
           name="Description"
         />
         <meta content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분" name="Keyword" />
