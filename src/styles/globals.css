@@ -45,3 +45,8 @@ body {
     opacity: 1;
   }
 }
+
+@font-face {
+  font-family: 'MaruBuri';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/MaruBuri-Regular.woff') format('woff');
+}

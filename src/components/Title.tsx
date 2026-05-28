@@ -39,9 +39,33 @@ const WeddingInvitation = styled("p", {
   marginBottom: 16,
 });
 
+const EnglishSubtitle = styled("p", {
+  fontSize: "1.8vh",
+  letterSpacing: "0.35em",
+  textTransform: "uppercase",
+  fontWeight: 300,
+  opacity: 0.75,
+  marginBottom: 20,
+  fontFamily:
+    '"Helvetica Neue", "Futura", "Avenir Next", sans-serif',
+});
+
+const SignatureTitle = styled("p", {
+  fontSize: "7.5vh",
+  fontStyle: "italic",
+  fontWeight: 400,
+  letterSpacing: "0.04em",
+  marginTop: 0,
+  marginBottom: 0,
+  opacity: 1,
+  fontFamily:
+    '"Snell Roundhand", "Brush Script MT", "Cormorant Garamond", cursive',
+});
+
 const GroomBride = styled("p", {
   fontSize: "3.5vh",
-  fontWeight: "bold",
+  fontWeight: 400,
+  fontFamily: '"MaruBuri", serif !important',
   opacity: 0.9,
   marginBottom: 16,
 });
@@ -64,6 +88,12 @@ export default function Title({ data }: TitleProps) {
       </VideoBackground>
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
+                <EnglishSubtitle>
+          Celebrating Love in Copenhagen
+        </EnglishSubtitle>
+                <SignatureTitle>
+          Taejun & Francesca
+        </SignatureTitle>
         <GroomBride>
           {data?.groom?.name} &#38; {data?.bride?.name}
         </GroomBride>

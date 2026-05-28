@@ -13,14 +13,32 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "3vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
+  letterSpacing: "0.18em",
+  fontFamily: '"MaruBuri", serif',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "14px",
+
+  "&::before": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
+
+  "&::after": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
 });
 
 const Content = styled("p", {
-  fontSize: "1.5vh",
+  fontSize: "2vh",
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 24,
@@ -60,10 +78,16 @@ export default function CongratulatoryMoney({
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider
+        style={{
+          marginTop: 0,
+          marginBottom: 32,
+          borderColor: "rgba(120,120,120,0.18)",
+        }}
+        plain
+      >
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
-      <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone
           style={{ fontSize: 64, marginBottom: 16 }}

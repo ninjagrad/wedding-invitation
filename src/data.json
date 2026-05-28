@@ -1,9 +1,9 @@
 {
-  "date": "2026년 7월 8일, 수요일 오후 2시 45분",
+  "date": "2026년 7월 8일, 수요일 오후 2시 45분 (덴마크 코펜하겐 기준)",
   "location": "덴마크 코펜하겐 시청\nRådhuspladsen 1, 1553 København, Denmark",
   "gretting": "대한민국과 이탈리아,\n서로 다른 곳에서 자라온 두 사람이 만나\n같은 마음으로 앞으로의 시간을 함께 걸어가려 합니다.\n\n서로를 향해 쌓아온 사랑이\n오래도록 이어질 수 있도록\n따뜻한 축복으로 함께해 주시면 감사하겠습니다.",
   "groom": {
-    "name": "공태준",
+    "name": "태준",
     "eng_name": "Taejun Kong",
     "account_number": "국민은행 892502-00-169827",
     "parents": {
@@ -18,16 +18,16 @@
     }
   },
   "bride": {
-    "name": "프란체스카 라소",
+    "name": "프란체스카",
     "eng_name": "Francesca Raso",
     "account_number": "○○은행 ***-***-******",
     "parents": {
       "mother": {
-        "name": "Guiseppina",
+        "name": "피나",
         "account_number": "○○은행 ***-***-******"
       },
       "father": {
-        "name": "Rafaelle",
+        "name": "라파엘레",
         "account_number": "○○은행 ***-***-******"
       }
     }

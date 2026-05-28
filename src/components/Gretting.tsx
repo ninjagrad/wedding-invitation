@@ -8,14 +8,32 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "3vh",
   fontWeight: "bold",
   opacity: 0.85,
+    letterSpacing: "0.18em",
+  fontFamily: '"MaruBuri", serif',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "14px",
+
+  "&::before": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
+
+  "&::after": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
   marginBottom: 0,
 });
 
 const Content = styled("div", {
-  fontSize: "1.75vh",
+  fontSize: "2vh",
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 16,
@@ -24,12 +42,22 @@ const Content = styled("div", {
 });
 
 const GroomBride = styled("p", {
-  fontSize: "1.75vh",
-  lineHeight: 1.75,
+  fontSize: "1.8vh",
+  lineHeight: 1.9,
   opacity: 0.85,
   marginBottom: 0,
   width: "100%",
   textAlign: "center",
+});
+
+const Name = styled("span", {
+  fontSize: "2.5vh",
+  fontWeight: "bold",
+});
+
+const ParentName = styled("span", {
+  fontSize: "2.1vh",
+  fontWeight: "bold",
 });
 
 type GrettingProps = {
@@ -39,7 +67,14 @@ type GrettingProps = {
 export default function Gretting({ data }: GrettingProps) {
   return (
     <Wrapper>
-      <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
+      <Divider
+        style={{
+          marginTop: 0,
+          marginBottom: 32,
+          borderColor: "rgba(120,120,120,0.18)",
+        }}
+        plain
+      >
         <Title>결혼합니다</Title>
       </Divider>
       <Content>
@@ -53,11 +88,11 @@ export default function Gretting({ data }: GrettingProps) {
         })}
       </Content>
       <GroomBride>
-        {data?.groom?.parents?.father?.name} ·{" "}
-        {data?.groom?.parents?.mother?.name}의 장남 {data?.groom?.name}
+        <ParentName>{data?.groom?.parents?.father?.name}</ParentName> ·{" "}
+        <ParentName>{data?.groom?.parents?.mother?.name}</ParentName>의 장남 <Name>{data?.groom?.name}</Name>
         <br />
-        {data?.bride?.parents?.father?.name} ·{" "}
-        {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}
+        <ParentName>{data?.bride?.parents?.father?.name}</ParentName> ·{" "}
+        <ParentName>{data?.bride?.parents?.mother?.name}</ParentName>의 장녀 <Name>{data?.bride?.name}</Name>
       </GroomBride>
     </Wrapper>
   );

@@ -19,10 +19,28 @@ const Wrapper = styled("div", {
 });
 
 const Title = styled("p", {
-  fontSize: "2vh",
+  fontSize: "3vh",
   fontWeight: "bold",
   opacity: 0.85,
   marginBottom: 0,
+  letterSpacing: "0.18em",
+  fontFamily: '"MaruBuri", serif',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "14px",
+
+  "&::before": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
+
+  "&::after": {
+    content: '"✦"',
+    fontSize: "1.6vh",
+    opacity: 0.55,
+  },
 });
 
 const KakaoTalkShareButton = styled(Button, {
@@ -102,7 +120,14 @@ export default function Share({ data }: ShareProps) {
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider
+        style={{
+          marginTop: 0,
+          marginBottom: 32,
+          borderColor: "rgba(120,120,120,0.18)",
+        }}
+        plain
+      >
         <Title>청첩장 공유하기</Title>
       </Divider>
       <KakaoTalkShareButton
