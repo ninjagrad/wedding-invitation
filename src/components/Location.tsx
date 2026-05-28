@@ -25,9 +25,8 @@ export default function Location() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>예식 장소</Title>
+        <Title>오시는 길</Title>
       </Divider>
-      <Content>덴마크 코펜하겐 시청사 Rådhuspladsen 1, 1553 København, Denmark</Content>
       <Image src="./assets/LocationMap.png" />
     </Wrapper>
   );

@@ -63,6 +63,7 @@ export default function CongratulatoryMoney({
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
+      <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone
           style={{ fontSize: 64, marginBottom: 16 }}
@@ -90,7 +91,7 @@ export default function CongratulatoryMoney({
       >
         {data?.groom?.parents?.father && (
           <div>
-            <b>혼주 {data?.groom?.parents?.father?.name}</b>
+            <b>부) {data?.groom?.parents?.father?.name}</b>
             <Divider type="vertical" />
             <CopyToClipboard
               text={data?.groom?.parents?.father?.account_number}
@@ -101,6 +102,21 @@ export default function CongratulatoryMoney({
                 onClick={() => message.success("계좌번호가 복사되었습니다.")}
               >
                 {data?.groom?.parents?.father?.account_number}
+              </Button>
+            </CopyToClipboard>
+          </div>
+        )}
+        {data?.groom?.parents?.mother && (
+          <div style={{ marginTop: 24, marginBottom: 24 }}>
+            <b>모) {data?.groom?.parents?.mother.name}</b>
+            <Divider type="vertical" />
+            <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
+              <Button
+                type="text"
+                style={{ padding: 0, margin: 0 }}
+                onClick={() => message.success("계좌번호가 복사되었습니다.")}
+              >
+                {data?.groom?.parents?.mother.account_number}
               </Button>
             </CopyToClipboard>
           </div>
