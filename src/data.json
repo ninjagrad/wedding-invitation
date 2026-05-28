@@ -6,7 +6,10 @@
     "name": "공태준",
     "account_number": "○○은행 ***-***-******",
     "parents": {
-   
+        "mother": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      },
       "father": {
         "name": "공석한",
         "account_number": "○○은행 ***-***-******"
