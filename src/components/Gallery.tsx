@@ -18,28 +18,28 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_1.png",
-    thumbnail: "./assets/Gallery_Photo_1.png",
+    original: "./assets/Gallery_Photo_1.jpeg",
+    thumbnail: "./assets/Gallery_Photo_1.jpeg",
   },
   {
-    original: "./assets/Gallery_Photo_2.png",
-    thumbnail: "./assets/Gallery_Photo_2.png",
+    original: "./assets/Gallery_Photo_2.jpeg",
+    thumbnail: "./assets/Gallery_Photo_2.jpeg",
   },
   {
-    original: "./assets/Gallery_Photo_3.png",
-    thumbnail: "./assets/Gallery_Photo_3.png",
+    original: "./assets/Gallery_Photo_3.jpeg",
+    thumbnail: "./assets/Gallery_Photo_3.jpeg",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/Gallery_Photo_4.jpeg",
+    thumbnail: "./assets/Gallery_Photo_4.jpeg",
   },
   {
-    original: "./assets/Gallery_Photo_5.png",
-    thumbnail: "./assets/Gallery_Photo_5.png",
+    original: "./assets/Gallery_Photo_5.jpeg",
+    thumbnail: "./assets/Gallery_Photo_5.jpeg",
   },
   {
-    original: "./assets/Gallery_Photo_6.png",
-    thumbnail: "./assets/Gallery_Photo_6.png",
+    original: "./assets/Gallery_Photo_6.jpeg",
+    thumbnail: "./assets/Gallery_Photo_6.jpeg",
   },
 ];
 
