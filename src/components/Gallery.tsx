@@ -7,6 +7,7 @@ const Wrapper = styled("div", {
   background: "#efebe9",
   backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
+  paddingTop: "60px",
 });
 
 const Title = styled("p", {
@@ -66,7 +67,7 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>우리의 순간들</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

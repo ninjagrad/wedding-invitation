@@ -44,13 +44,13 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="태준❤프란체스카 결혼식에 초대합니다" name="Title" />
+        <meta content="태준❤프란체스카, 결혼합니다" name="Title" />
         <meta
           content="2026년 7월 8일 수요일 오후 2시 45분"
           name="Description"
         />
         <meta content="2026년 7월 8일 수요일 오후 2시 45분" name="Keyword" />
-        <meta property="og:title" content="태준❤프란체스카 결혼식에 초대합니다" />
+        <meta property="og:title" content="태준❤프란체스카, 결혼합니다" />
         <meta
           property="og:description"
           content="2026년 7월 8일 수요일 오후 2시 45분"
@@ -60,7 +60,7 @@ export default function Home() {
           content="https://ninjagrad.github.io/wedding-invitation/"
         />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>태준❤프란체스카 결혼식에 초대합니다</title>
+        <title>태준❤프란체스카, 결혼합니다</title>
       </Head>
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>

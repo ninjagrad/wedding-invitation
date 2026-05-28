@@ -1,6 +1,6 @@
 {
-  "date": "2026년 7월 8일, 수요일 오후 2시 45분 (덴마크 코펜하겐 기준)",
-  "location": "덴마크 코펜하겐 시청\nRådhuspladsen 1, 1553 København, Denmark",
+  "date": "2026년 7월 8일, 수요일 오후 2시 45분",
+  "location": "덴마크 코펜하겐 시청사",
   "gretting": "대한민국과 이탈리아,\n서로 다른 곳에서 자라온 두 사람이 만나\n같은 마음으로 앞으로의 시간을 함께 걸어가려 합니다.\n\n서로를 향해 쌓아온 사랑이\n오래도록 이어질 수 있도록\n따뜻한 축복으로 함께해 주시면 감사하겠습니다.",
   "groom": {
     "name": "태준",
@@ -33,8 +33,8 @@
     }
   },
   "kakaotalk": {
-    "api_token": "",
-    "wedding_invitation_url": "",
-    "share_image": ""
+    "api_token": "1fa6c89e2a88c3964255ef891ca3c95a",
+    "wedding_invitation_url": "https://ninjagrad.github.io/wedding-invitation/",
+    "share_image": "https://ninjagrad.github.io/wedding-invitation/assets/thumbnail.jpg"
   }
 }

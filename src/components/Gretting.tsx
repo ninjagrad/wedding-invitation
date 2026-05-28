@@ -5,6 +5,7 @@ const Wrapper = styled("div", {
   background: "#efebe9",
   backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
+  paddingTop: "60px",
 });
 
 const Title = styled("p", {

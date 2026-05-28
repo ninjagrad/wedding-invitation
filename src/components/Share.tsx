@@ -1,7 +1,7 @@
 import { LinkOutlined, MessageFilled } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, message } from "antd";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 declare global {
@@ -16,6 +16,7 @@ const Wrapper = styled("div", {
   width: "100%",
   paddingBottom: 42,
   textAlign: "center",
+  paddingTop: "60px",
 });
 
 const Title = styled("p", {
@@ -80,43 +81,39 @@ type ShareProps = {
 };
 
 export default function Share({ data }: ShareProps) {
-  const [shareCount, setShareCount] = useState<number>(0);
-
   useEffect(() => {
-    if (shareCount !== 0) {
-      window.Kakao.Link.createDefaultButton({
-        objectType: "feed",
-        container: "#sendKakao",
-        content: {
-          title: `${data?.groom?.name}❤${data?.bride?.name} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
-          imageUrl: data?.kakaotalk?.share_image,
-          link: {
-            mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
-            webUrl: data?.kakaotalk?.wedding_invitation_url,
-          },
-        },
-        buttons: [
-          {
-            title: "청첩장 열기",
-            link: {
-              mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
-              webUrl: data?.kakaotalk?.wedding_invitation_url,
-            },
-          },
-        ],
-        installTalk: true,
-      });
-      setTimeout(() => {
-        document.getElementById("sendKakao")?.click();
-        message.success("카카오톡으로 청첩장을 공유합니다!");
-      }, 100);
-    } else {
-      try {
+    try {
+      if (!window.Kakao.isInitialized()) {
         window.Kakao.init(data?.kakaotalk?.api_token);
-      } catch {}
+      }
+    } catch {}
+  }, []);
+
+  const handleKakaoShare = () => {
+    try {
+      window.Kakao.Share.sendDefault({
+        objectType: "text",
+
+  text: "태준 & 프란체스카의 작은 결혼식",
+
+  link: {
+
+    mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
+
+    webUrl: data?.kakaotalk?.wedding_invitation_url,
+
+  },
+
+  buttonTitle: "청첩장 열기",
+
+});
+
+      message.success("카카오톡으로 청첩장을 공유합니다!");
+    } catch (error) {
+      console.error(error);
+      message.error("카카오톡 공유에 실패했습니다.");
     }
-  }, [shareCount]);
+  };
 
   return (
     <Wrapper>
@@ -133,9 +130,8 @@ export default function Share({ data }: ShareProps) {
       <KakaoTalkShareButton
         style={{ margin: 8 }}
         icon={<MessageFilled />}
-        id="sendKakao"
         size="large"
-        onClick={() => setShareCount(shareCount + 1)}
+        onClick={handleKakaoShare}
       >
         카카오톡으로 공유하기
       </KakaoTalkShareButton>

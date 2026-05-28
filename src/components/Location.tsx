@@ -7,6 +7,7 @@ const Wrapper = styled("div", {
   width: "100%",
   paddingBottom: 42,
   textAlign: "center",
+  paddingTop: "60px",
 });
 
 const Title = styled("p", {
