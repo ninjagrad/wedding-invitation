@@ -62,7 +62,9 @@ export default function Location() {
         <Title>예식 장소</Title>
       </Divider>
       <Description>
-덴마크 코펜하겐 시청사 Rådhuspladsen 1, 1553 København, Denmark
+        덴마크 코펜하겐 시청사
+        <br />
+        Rådhuspladsen 1, 1553 København, Denmark
       </Description>
       <Image src="./assets/LocationMap.png" />
     </Wrapper>
