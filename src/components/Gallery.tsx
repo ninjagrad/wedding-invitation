@@ -46,28 +46,28 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_1.png",
-    thumbnail: "./assets/Gallery_Photo_1.png",
+    original: "./assets/Gallery_Photo_1.webp",
+    thumbnail: "./assets/Gallery_Photo_1.webp",
   },
   {
-    original: "./assets/Gallery_Photo_2.png",
-    thumbnail: "./assets/Gallery_Photo_2.png",
+    original: "./assets/Gallery_Photo_2.webp",
+    thumbnail: "./assets/Gallery_Photo_2.webp",
   },
   {
-    original: "./assets/Gallery_Photo_3.png",
-    thumbnail: "./assets/Gallery_Photo_3.png",
+    original: "./assets/Gallery_Photo_3.webp",
+    thumbnail: "./assets/Gallery_Photo_3.webp",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/Gallery_Photo_4.webp",
+    thumbnail: "./assets/Gallery_Photo_4.webp",
   },
   {
-    original: "./assets/Gallery_Photo_5.png",
-    thumbnail: "./assets/Gallery_Photo_5.png",
+    original: "./assets/Gallery_Photo_5.webp",
+    thumbnail: "./assets/Gallery_Photo_5.webp",
   },
   {
-    original: "./assets/Gallery_Photo_6.png",
-    thumbnail: "./assets/Gallery_Photo_6.png",
+    original: "./assets/Gallery_Photo_6.webp",
+    thumbnail: "./assets/Gallery_Photo_6.webp",
   },
 ];
 
