@@ -82,31 +82,60 @@ type ShareProps = {
 
 export default function Share({ data }: ShareProps) {
   useEffect(() => {
-    try {
-      if (!window.Kakao.isInitialized()) {
-        window.Kakao.init(data?.kakaotalk?.api_token);
-      }
-    } catch {}
-  }, []);
+    const kakao = window.Kakao;
+    const kakaoToken = data?.kakaotalk?.api_token;
+
+    if (!kakao || !kakaoToken) {
+      return;
+    }
+
+    if (!kakao.isInitialized()) {
+      kakao.init(kakaoToken);
+    }
+  }, [data?.kakaotalk?.api_token]);
 
   const handleKakaoShare = () => {
+    const kakao = window.Kakao;
+    const kakaoToken = data?.kakaotalk?.api_token;
+    const invitationUrl = data?.kakaotalk?.wedding_invitation_url;
+    const shareImage = data?.kakaotalk?.share_image;
+
+    if (!kakao) {
+      message.error("카카오톡 SDK를 불러오지 못했습니다.");
+      return;
+    }
+
+    if (!kakaoToken || !invitationUrl) {
+      message.error("카카오톡 공유 설정이 비어 있습니다.");
+      return;
+    }
+
     try {
-      window.Kakao.Share.sendDefault({
-        objectType: "text",
+      if (!kakao.isInitialized()) {
+        kakao.init(kakaoToken);
+      }
 
-  text: "태준 & 프란체스카의 작은 결혼식",
-
-  link: {
-
-    mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
-
-    webUrl: data?.kakaotalk?.wedding_invitation_url,
-
-  },
-
-  buttonTitle: "청첩장 열기",
-
-});
+      kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "태준 & 프란체스카의 작은 결혼식",
+          description: "코펜하겐에서 전하는 작은 결혼 소식",
+          imageUrl: shareImage,
+          link: {
+            mobileWebUrl: invitationUrl,
+            webUrl: invitationUrl,
+          },
+        },
+        buttons: [
+          {
+            title: "청첩장 열기",
+            link: {
+              mobileWebUrl: invitationUrl,
+              webUrl: invitationUrl,
+            },
+          },
+        ],
+      });
 
       message.success("카카오톡으로 청첩장을 공유합니다!");
     } catch (error) {
