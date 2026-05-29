@@ -93,8 +93,8 @@ export default function CongratulatoryMoney({
           src="./assets/thumbnail.png"
           alt="계좌번호 확인"
           style={{
-            width: 72,
-            height: 72,
+            width: 108,
+            height: 108,
             marginBottom: 0,
             borderRadius: "50%",
             objectFit: "cover",
