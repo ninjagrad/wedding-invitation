@@ -1,9 +1,8 @@
-import { CheckCircleTwoTone } from "@ant-design/icons";
+import { HeartTwoTone } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { HeartTwoTone } from "@ant-design/icons";
 
 const Wrapper = styled("div", {
   background: "#efebe9",
@@ -90,10 +89,18 @@ export default function CongratulatoryMoney({
         <Title>축하의 마음을 전하세요</Title>
       </Divider>
       <ContactButton onClick={() => setGroomVisible(true)}>
-        <HeartTwoTone
-  style={{ fontSize: 64, marginBottom: 0 }}
-  twoToneColor="#d8a7b1"
-/>
+        <img
+          src="./assets/thumbnail.png"
+          alt="계좌번호 확인"
+          style={{
+            width: 72,
+            height: 72,
+            marginBottom: 0,
+            borderRadius: "50%",
+            objectFit: "cover",
+            boxShadow: "0 6px 16px rgba(0, 0, 0, 0.12)",
+          }}
+        />
         <br />
         <SubContent>계좌번호 확인</SubContent>
       </ContactButton>
