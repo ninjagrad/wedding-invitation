@@ -1,4 +1,4 @@
-import { LinkOutlined, QrcodeOutlined } from "@ant-design/icons";
+import { LinkOutlined } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, message } from "antd";
 import React from "react";
@@ -70,54 +70,12 @@ const LinkShareButton = styled(Button, {
   },
 });
 
-const QrCard = styled("div", {
-  width: "min(78vw, 280px)",
-  margin: "0 auto 24px",
-  padding: "18px 18px 16px",
-  borderRadius: 28,
-  background: "rgba(255, 252, 248, 0.82)",
-  boxShadow: "0 14px 32px rgba(92, 64, 51, 0.13)",
-  border: "1px solid rgba(160, 120, 105, 0.18)",
-});
-
-const QrFrame = styled("div", {
-  position: "relative",
-  width: "100%",
-  aspectRatio: "1 / 1",
-  borderRadius: 24,
-  padding: 0,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  background: "linear-gradient(145deg, #fff8f3, #ead8cf)",
-  boxShadow: "inset 0 0 0 1px rgba(120, 90, 80, 0.12)",
-});
-
-const QrImage = styled("img", {
-  width: "calc(100% - 24px)",
-  height: "calc(100% - 24px)",
-  display: "block",
-  borderRadius: 18,
-  background: "#fff",
-});
-
-const QrCaption = styled("p", {
-  margin: "14px 0 0",
-  fontFamily: '"MaruBuri", serif',
-  fontSize: 14,
-  lineHeight: 1.7,
-  color: "rgba(60, 45, 40, 0.72)",
-});
-
 type ShareProps = {
   data?: Data;
 };
 
 export default function Share({ data }: ShareProps) {
   const invitationUrl = data?.kakaotalk?.wedding_invitation_url ?? "";
-  const qrCodeUrl = invitationUrl
-    ? `https://api.qrserver.com/v1/create-qr-code/?size=420x420&margin=18&color=5f4a45&bgcolor=fffaf6&data=${encodeURIComponent(invitationUrl)}`
-    : "";
 
   const handleKakaoShare = async () => {
     if (!invitationUrl) {
@@ -153,16 +111,6 @@ export default function Share({ data }: ShareProps) {
       >
         <Title>청첩장 공유하기</Title>
       </Divider>
-      {qrCodeUrl && (
-        <QrCard>
-          <QrFrame>
-            <QrImage src={qrCodeUrl} alt="청첩장 QR 코드" />
-          </QrFrame>
-          <QrCaption>
-            <QrcodeOutlined /> QR 코드로 청첩장을 열어보세요
-          </QrCaption>
-        </QrCard>
-      )}
       <KakaoTalkShareButton
         style={{ margin: 8 }}
         icon={<LinkOutlined />}
